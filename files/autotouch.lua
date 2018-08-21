@@ -111,5 +111,5 @@ plutil = {type = "function", description = "Reads and modifies plists \ne.g Prin
 sbreload = {type = "function", description = "Simplest way of respringing the device", args = "(-key <keyname>)", returns = "(Returns: None)"},
 scp = {type = "function", description = "Secure Copy - use SSH for file transfer.<infile> and <outfile> can be local files such as /etc/apt/sources.list or remote files in the format <user>@<host>:<filename> ", args = "([options] <infile> <outfile>)", returns = "(Returns: None)"},
 wget = {type = "function", description = "Tool for downloading files from the internet", args = "([options] <url>)", returns = "(Returns: None)"},
-id = {type = "function", description = "Returns the currently logged in user", args = "([options] <url>)", returns = "(Returns: None)"},
+id = {type = "function", description = "Returns the currently logged in user ID", args = "([options] <url>)", returns = "(Returns: None)"},
 }
