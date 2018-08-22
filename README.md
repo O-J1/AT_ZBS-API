@@ -5,7 +5,7 @@ A ZeroBrane API and syntax highlighting, focused on devloping for AutoTouch.
 Place the halion.lua file to this folder: ZeroBraneStudio/api/lua
 To register the api open your user settings (user.lua) and add line: 
 
-api = {'halion'}
+api = {'at'}
 
 Save settings and restart ZeroBraneStudio
 
