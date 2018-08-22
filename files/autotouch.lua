@@ -37,6 +37,8 @@ clipText = {type = "function", description = "Returns the text from devices clip
 inputText = {type = "function", description = "Input text as you would with a keyboard. You can delete a character backspace by inputText(\b).", args = "(text)", returns = "(Returns: None)"},
 dialog = {type = "function", description = "Pop up self-defined dialog box to accept the user input. Please refer to the example for specific usage", args = "(controls, enableRemember)", returns = "(Returns: None)"},
 clearDialogValues = {type = "function", description = "Clear the remembered values of the dialog created by the function dialog.", args = "(script)", returns = "(Returns: None)"},
+setTarget = {type = "function", description = "Sets the target of the app to be run in (beta/bugged)", args = "(appidentifier)", returns = "(Returns: None)"},
+toast = {type = "function", description = "Displays an alert that automatically fades away \nAT >=ver.4.2.3", args = "(string)", returns = "(Returns: None)"},
  KEY_TYPE = {
     type = "value",
     description = "Physical key constant parent",
@@ -111,5 +113,5 @@ plutil = {type = "function", description = "Reads and modifies plists \ne.g Prin
 sbreload = {type = "function", description = "Simplest way of respringing the device", args = "(-key <keyname>)", returns = "(Returns: None)"},
 scp = {type = "function", description = "Secure Copy - use SSH for file transfer.<infile> and <outfile> can be local files such as /etc/apt/sources.list or remote files in the format <user>@<host>:<filename> ", args = "([options] <infile> <outfile>)", returns = "(Returns: None)"},
 wget = {type = "function", description = "Tool for downloading files from the internet", args = "([options] <url>)", returns = "(Returns: None)"},
-id = {type = "function", description = "Returns the currently logged in user ID", args = "([options] <url>)", returns = "(Returns: None)"},
+id = {type = "function", description = "Returns the currently logged in user", args = "([options] <url>)", returns = "(Returns: None)"},
 }
