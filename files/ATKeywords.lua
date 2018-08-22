@@ -1,3 +1,5 @@
+-- Place this in your \ZeroBraneStudio\packages folder
+
 local func = 'touchDown touchUp touchMove keyDown keyUp getColor getColors findColor findColors findImage screenshot appRun appKill appState rootDir usleep log alert vibrate playAudio stopAudio getOrientation getScreenResolution getSN getVersion intToRgb copyText clipText inputText dialog clearDialogValues setTarget toast'
 
 local cmdutils = 'cat cd launchctl curl cycript echo mv plutil sbreload scp wget id '
