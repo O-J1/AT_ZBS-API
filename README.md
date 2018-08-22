@@ -18,8 +18,12 @@ Place the user.lua file to this folder \ZeroBraneStudio\cfg **or** add the value
 Restart ZeroBraneStudio  
 You can change the color and appearance of syntax highlighting in your user settings (user.lua)  
 
-#### Reccomended changes:
+#### Reccomended userfile changes:
 
+	styles = loadfile('cfg/tomorrow.lua')('TomorrowNightEighties') -- theme matching AT keywords highlighting
+	stylesoutshell = styles -- apply the same scheme to Output/Console windows
+	styles.auxwindow = styles.text -- apply text colors to auxiliary windows
+    styles.calltip = styles.text -- apply text colors to tooltips
     styles['keywords3'] = {fg = {204, 153, 204}, u = true, i = true}   
     styles['keywords4'] = {fg = {204, 205, 76}, u = true }  
     styles['keywords5'] = {fg = {204, 205, 76}, u = true }  
