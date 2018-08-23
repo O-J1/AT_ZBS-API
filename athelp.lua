@@ -1,3 +1,5 @@
+--Drop this into your \ZeroBraneStudio\packages folder
+
 local id = ID("athelpmenu.athelpmenu")
 local url = "https://autotouch.net/server/doc/en.html"
 return {
