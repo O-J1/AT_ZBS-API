@@ -1,3 +1,5 @@
+-- Place this in your \ZeroBraneStudio\packages folder
+
 local id = ID("showatreference.showatreferencemenu")
 local ident = "([a-zA-Z_][a-zA-Z_0-9%.]*)"
 local func = {['touchDown'] = true, ['touchUp'] = true, ['touchMove'] = true, ['keyDown'] = true, ['keyUp'] = true, ['getColor'] = true, ['getColors'] = true, ['findColor'] = true, ['findColors'] = true, ['findImage'] = true, [''] = true, ['screenshot'] = true, ['appRun'] = true, ['appKill'] = true, ['appState'] = true, ['rootDir'] = true, ['usleep'] = true, ['log'] = true, ['alert'] = true, ['vibrate'] = true, ['playAudio'] = true, ['stopAudio'] = true, ['getOrientation'] = true, ['getScreenResolution'] = true, ['getSN'] = true, ['getVersion'] = true, ['intToRgb'] = true, ['copyText'] = true, ['clipText'] = true, ['inputText'] = true, ['dialog'] = true, ['clearDialogValues'] = true, ['setTarget'] = true, ['toast'] = true,}
