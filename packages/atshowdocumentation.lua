@@ -2,16 +2,99 @@
 
 local id = ID("showatreference.showatreferencemenu")
 local ident = "([a-zA-Z_][a-zA-Z_0-9%.]*)"
-local func = {['touchDown'] = true, ['touchUp'] = true, ['touchMove'] = true, ['keyDown'] = true, ['keyUp'] = true, ['getColor'] = true, ['getColors'] = true, ['findColor'] = true, ['findColors'] = true, ['findImage'] = true, [''] = true, ['screenshot'] = true, ['appRun'] = true, ['appKill'] = true, ['appState'] = true, ['rootDir'] = true, ['usleep'] = true, ['log'] = true, ['alert'] = true, ['vibrate'] = true, ['playAudio'] = true, ['stopAudio'] = true, ['getOrientation'] = true, ['getScreenResolution'] = true, ['getSN'] = true, ['getVersion'] = true, ['intToRgb'] = true, ['copyText'] = true, ['clipText'] = true, ['inputText'] = true, ['dialog'] = true, ['clearDialogValues'] = true, ['setTarget'] = true, ['toast'] = true,}
+local func = {
+['touchDown'] = True, 
+['touchMove'] = True, 
+['touchUp'] = True, 
+['keyDown'] = True, 
+['keyUp'] = True, 
+['getColor'] = True, 
+['getColors'] = True, 
+['findColor'] = True, 
+['findColors'] = True, 
+['findImage'] = True, 
+['screenshot'] = True, 
+['appRun'] = True, 
+['appKill'] = True, 
+['appState'] = True, 
+['rootDir'] = True, 
+['currentPath'] = True, 
+['usleep'] = True, 
+['log'] = True, 
+['alert'] = True, 
+['toast'] = True, 
+['vibrate'] = True, 
+['playAudio'] = True, 
+['stopAudio'] = True, 
+['getOrientation'] = True, 
+['getScreenResolution'] = True, 
+['getSN'] = True, 
+['getVersion'] = True, 
+['frontMostAppId'] = True, 
+['frontMostAppOrientation'] = True, 
+['intToRgb'] = True, 
+['rgbToInt'] = True, 
+['copyText'] = True, 
+['clipText'] = True, 
+['inputText'] = True, 
+['dialog'] = True, 
+['clearDialogValues'] = True, 
+['openURL'] = True, 
+['isLicensed'] = True, 
+['setAutoLaunch'] = True, 
+['listAutoLaunch'] = True, 
+['stop'] = True, 
+['ocr'] = 'ocrregion-languages-threshold-whitelist-blacklist-timeout-tessdataparentdir-debug'}
 
-local link = {['touchDown'] = 'id-x-y', ['touchUp'] = 'id-x-y', ['touchMove'] = 'id-x-y', ['keyDown'] = 'keytype', ['keyUp'] = 'keytype', ['getColor'] = 'x-y', ['getColors'] = 'locations', ['findColor'] = 'color-count-region', ['findColors'] = 'colors-count-region', ['findImage'] = 'imagepath-count-fuzzy-ignorecolors-region', ['screenshot'] = 'filepath-region', ['appRun'] = 'appidentifier', ['appKill'] = 'appidentifier', ['appState'] = 'appidentifier', ['rootDir'] = "", ['usleep'] = 'microseconds',  ['log'] = 'content', ['alert'] = 'message', ['vibrate'] = "", ['playAudio'] = 'audiofile-times', ['stopAudio'] = "", ['getOrientation'] = "", ['getScreenResolution'] = "", ['getSN'] = "", ['getVersion'] = "", ['intToRgb'] = 'intcolor', ['copyText'] = 'r-g-b', ['clipText'] = '', ['inputText'] = "text", ['dialog'] = 'controls-enableremember', ['clearDialogValues'] = 'script', ['setTarget'] = "", ['toast'] = "",}
+local link = {
+['touchDown'] = 'touchdownid-x-y', 
+['touchMove'] = 'touchmoveid-x-y', 
+['touchUp'] = 'touchupid-x-y', 
+['keyDown'] = 'keydownkeytype', 
+['keyUp'] = 'keyupkeytype', 
+['getColor'] = 'getColors', 
+['getColors'] = 'getcolorslocations', 
+['findColor'] = 'findcolorcolor-count-region-debug-righttoleft-bottomtotop', 
+['findColors'] = 'findcolorscolors-count-region-debug-righttoleft-bottomtotop', 
+['findImage'] = 'findimagetargetimagepath-count-threshold-region-debug-method', 
+['screenshot'] = 'screenshotfilepath-region', 
+['appRun'] = 'apprunappidentifier', 
+['appKill'] = 'appkillappidentifier', 
+['appState'] = 'appstateappidentifier', 
+['rootDir'] = 'rootdir', 
+['currentPath'] = 'currentpath', 
+['usleep'] = 'usleepmicroseconds', 
+['log'] = 'logcontent', 
+['alert'] = 'alertmessage', 
+['toast'] = 'toastmessage-delay', 
+['vibrate'] = 'vibrate', 
+['playAudio'] = 'playaudioaudiofile-times', 
+['stopAudio'] = 'stopaudio', 
+['getOrientation'] = 'getorientation', 
+['getScreenResolution'] = 'getscreenresolution', 
+['getSN'] = 'getsn', 
+['getVersion'] = 'getversion', 
+['frontMostAppId'] = 'frontmostappid', 
+['frontMostAppOrientation'] = 'frontmostapporientation', 
+['intToRgb'] = 'inttorgbintcolor', 
+['rgbToInt'] = 'rgbtointr-g-b', 
+['copyText'] = 'copytexttext', 
+['clipText'] = 'cliptext', 
+['inputText'] = 'inputtexttext', 
+['dialog'] = 'dialogcontrols-orientations', 
+['clearDialogValues'] = 'cleardialogvaluesscript', 
+['openURL'] = 'openurlurlstring', 
+['isLicensed'] = 'islicensed', 
+['setAutoLaunch'] = 'setautolaunchscriptpath-on', 
+['listAutoLaunch'] = 'listautolaunch', 
+['stop'] = 'stop', 
+['ocr'] = 'ocrregion-languages-threshold-whitelist-blacklist-timeout-tessdataparentdir-debug'}
 
 return {
   name = "Show AutoTouch reference",
   description = "Adds 'show AutoTouch reference' option to the editor menu.",
   author = "Xamanthas",
-  version = 0.1,
-  dependencies = "AutoTouch =>3.5, cURL, Erica Utilities, wget, coreutils, UIKit Tools, OpenSSH",
+  version = 0.2,
 
   onMenuEditor = function(self, menu, editor, event)
     local point = editor:ScreenToClient(event:GetPosition())
@@ -44,7 +127,7 @@ return {
       ref = string.format(ref .. link[ref])
       ref = ref:lower(ref)
       menu:Connect(id, wx.wxEVT_COMMAND_MENU_SELECTED,
-      function() wx.wxLaunchDefaultBrowser('https://autotouch.net/server/doc/en.html#'..ref, 0) end)
+      function() wx.wxLaunchDefaultBrowser('https://docs.autotouch.net/#'..ref, 0) end)
     end
   end
 }

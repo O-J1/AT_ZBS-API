@@ -1,6 +1,6 @@
 -- Place this in your \ZeroBraneStudio\packages folder
 
-local func = 'touchDown touchUp touchMove keyDown keyUp getColor getColors findColor findColors findImage screenshot appRun appKill appState rootDir usleep log alert vibrate playAudio stopAudio getOrientation getScreenResolution getSN getVersion intToRgb copyText clipText inputText dialog clearDialogValues setTarget toast'
+local func = 'touchDown touchMove touchUp keyDown keyUp getColor getColors findColor findColors findImage screenshot appRun appKill appState rootDir currentPath usleep log alert toast vibrate playAudio stopAudio getOrientation getScreenResolution getSN getVersion frontMostAppId frontMostAppOrientation intToRgb rgbToInt copyText clipText inputText dialog clearDialogValues openURL isLicensed setAutoLaunch listAutoLaunch stop ocr'
 
 local cmdutils = 'cat cd launchctl curl cycript echo mv plutil sbreload scp wget id '
 
@@ -12,7 +12,7 @@ return {
     name = "AutoTouch Keywords ",
     description = "Keywords for syntax highlighting",
     author = "Xamanthas",
-    version = 0.1,
+    version = 0.2,
   
     onRegister = function(self) 
         local luaspecs =  ide.specs.lua

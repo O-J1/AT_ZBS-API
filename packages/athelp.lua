@@ -1,13 +1,12 @@
 --Drop this into your \ZeroBraneStudio\packages folder
 
 local id = ID("athelpmenu.athelpmenu")
-local url = "https://autotouch.net/server/doc/en.html"
+local url = "https://docs.autotouch.net/"
 return {
   name = "AutoTouch Documentation",
   description = "Adds AutoTouch help option to the menu.",
-  author = "..",
-  version = 0.1,
-  dependencies = "AutoTouch =>3.5, cURL, Erica Utilities, wget, coreutils, UIKit Tools, OpenSSH",
+  author = "Xamanthas",
+  version = 0.2,
 
   onRegister = function(self)
     local menu = ide:FindTopMenu("&Help")

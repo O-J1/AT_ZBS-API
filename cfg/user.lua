@@ -1,7 +1,3 @@
---[[--
-  Use this file to specify **User** preferences.
-  Review [examples](+C:\Users\Joshua\Downloads\Keep\ZeroBraneStudio\cfg\user-sample.lua) or check [online documentation](http://studio.zerobrane.com/documentation.html) for details.
---]]--
 api = {'at'}
 styles = loadfile('cfg/tomorrow.lua')('TomorrowNightEighties')
 stylesoutshell = styles -- apply the same scheme to Output/Console windows
