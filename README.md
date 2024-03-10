@@ -1,6 +1,8 @@
 # AT_ZBS-API
 A ZeroBrane API and syntax highlighting, focused on devloping for AutoTouch.
 
+Note: This repo will not see further updates as I no longer have a device that can run AutoTouch. Archived 2024.
+
 ### API for autocompletion and tooltips for functions
 
 Place the attooltips.lua file to this folder: C:\\....\ZeroBraneStudio\api\lua.  
